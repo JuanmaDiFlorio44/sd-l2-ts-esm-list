@@ -19,3 +19,11 @@ export function productsListComponent() {
 
   return section;
 }
+
+export function SortedByPrice(lista: Array<{price: number}>): Array<{price: number}> {
+  return lista.sort((a, b) => a.price - b.price);
+}
+
+const prodcutosOrdenadosXprecio = SortedByPrice(productsList);
+console.log(prodcutosOrdenadosXprecio);
+
